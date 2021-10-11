@@ -53,7 +53,7 @@ abstract class AbstractVerb implements Interfaces\VerbInterface
     protected $result = null;
 
     /** @var string */
-    protected $resultClass = '\Assimp\Command\Result\SimpleResult';
+    protected $resultClass = '\Assimp\Command\Result\ExportResult';
 
 
     /**
