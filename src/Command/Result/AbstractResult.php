@@ -30,6 +30,7 @@
 
 namespace Assimp\Command\Result;
 
+use Assimp\Command\Result;
 use Assimp\Command\Verbs\Interfaces\VerbInterface;
 use Assimp\Command\Result\Interfaces\ResultInterface;
 
@@ -70,7 +71,7 @@ abstract class AbstractResult implements \ArrayAccess, \Countable, ResultInterfa
     /**
      * @see \Assimp\Command\Result\Interfaces\ResultInterface::isExecuted()
      */
-    public function isExecuted()
+    public function isExecuted() : bool
     {
         return $this->getExitCode() !== null && $this->count();
     }
@@ -79,7 +80,7 @@ abstract class AbstractResult implements \ArrayAccess, \Countable, ResultInterfa
     /**
      * @see \Assimp\Command\Result\Interfaces\ResultInterface::isSuccess()
      */
-    public function isSuccess()
+    public function isSuccess() : bool
     {
         return !is_null($this->exitCode) && $this->exitCode === 0;
     }
@@ -88,7 +89,7 @@ abstract class AbstractResult implements \ArrayAccess, \Countable, ResultInterfa
     /**
      * @see \Assimp\Command\Result\Interfaces\ResultInterface::setExitCode()
      */
-    public function setExitCode($exitCode)
+    public function setExitCode($exitCode) : ResultInterface
     {
         $this->exitCode = (int) $exitCode;
         return $this;
@@ -98,7 +99,7 @@ abstract class AbstractResult implements \ArrayAccess, \Countable, ResultInterfa
     /**
      * @see \Assimp\Command\Result\Interfaces\ResultInterface::getExitCode()
      */
-    public function getExitCode()
+    public function getExitCode() : int
     {
         return $this->exitCode;
     }
@@ -107,7 +108,7 @@ abstract class AbstractResult implements \ArrayAccess, \Countable, ResultInterfa
     /**
      * @see \Assimp\Command\Result\Interfaces\ResultInterface::getCommand()
      */
-    public function getCommand()
+    public function getCommand() : string
     {
         return $this->command;
     }
@@ -116,7 +117,7 @@ abstract class AbstractResult implements \ArrayAccess, \Countable, ResultInterfa
     /**
      * @see \Assimp\Command\Result\Interfaces\ResultInterface::setCommand()
      */
-    public function setCommand($command)
+    public function setCommand($command) : ResultInterface
     {
         $this->command = (string) $command;
         return $this;
@@ -126,7 +127,7 @@ abstract class AbstractResult implements \ArrayAccess, \Countable, ResultInterfa
     /**
      * @see \Assimp\Command\Result\Interfaces\ResultInterface::getVerb()
      */
-    public function getVerb()
+    public function getVerb() : VerbInterface
     {
         return $this->verb;
     }
@@ -135,7 +136,7 @@ abstract class AbstractResult implements \ArrayAccess, \Countable, ResultInterfa
     /**
      * @see \Assimp\Command\Result\Interfaces\ResultInterface::setVerb()
      */
-    public function setVerb(VerbInterface $verb)
+    public function setVerb(VerbInterface $verb) : ResultInterface
     {
         $this->verb = $verb;
         return $this;
@@ -157,7 +158,7 @@ abstract class AbstractResult implements \ArrayAccess, \Countable, ResultInterfa
     /**
      * @see \Assimp\Command\Result\Interfaces\ResultInterface::setOutput()
      */
-    public function setOutput(array $output)
+    public function setOutput(array $output) : ResultInterface
     {
         $this->output = $output;
         $this->parse();
@@ -168,7 +169,7 @@ abstract class AbstractResult implements \ArrayAccess, \Countable, ResultInterfa
     /**
      * @see \Assimp\Command\Result\Interfaces\ResultInterface::getOutputLine()
      */
-    public function getOutputLine($line)
+    public function getOutputLine($line) : string
     {
         return array_key_exists($line, $this->output) ? $this->output[$line] : null;
     }

@@ -115,7 +115,7 @@ interface ResultInterface
      * @param string|null $glue
      * @return string|array
      */
-    public function getOutput(sting $glue = null);
+    public function getOutput(string $glue = null);
 
 
     /**
