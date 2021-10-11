@@ -37,7 +37,7 @@ use Assimp\Command\Verbs\DumpVerb;
  *
  * @author magdev
  */
-class DumpVerbTest extends \PHPUnit_Framework_TestCase
+class DumpVerbTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Verbs\DumpVerb
@@ -50,7 +50,7 @@ class DumpVerbTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new DumpVerb();
 

@@ -37,7 +37,7 @@ use Assimp\Command\Verbs\VersionVerb;
  *
  * @author magdev
  */
-class VersionVerbTest extends \PHPUnit_Framework_TestCase
+class VersionVerbTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Verbs\VersionVerb
@@ -48,7 +48,7 @@ class VersionVerbTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new VersionVerb();
     }

@@ -53,7 +53,7 @@ class AbstractVerbProxy extends AbstractVerb
  *
  * @author magdev
  */
-class AbstractVerbTest extends \PHPUnit_Framework_TestCase
+class AbstractVerbTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Tests\Command\Verbs\AbstractVerbProxy
@@ -70,7 +70,7 @@ class AbstractVerbTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new AbstractVerbProxy();
 

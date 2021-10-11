@@ -37,7 +37,7 @@ use Assimp\Command\Result\InfoResult;
  *
  * @author magdev
  */
-class InfoResultTest extends \PHPUnit_Framework_TestCase
+class InfoResultTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Result\DumpResult
@@ -47,18 +47,18 @@ class InfoResultTest extends \PHPUnit_Framework_TestCase
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::setUp()
+     * @see PHPUnit\Framework\TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp():void
     {
         $this->object = new InfoResult();
     }
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::tearDown()
+     * @see PHPUnit\Framework\TestCase::tearDown()
      */
-    protected function tearDown()
+    protected function tearDown() : void
     {
     	$this->object = null;
     }

@@ -35,7 +35,7 @@ use Assimp\Command\Verbs\Container\ParameterContainer;
 /**
  * Test for ParameterContainer
  */
-class ParameterContainerTest extends \PHPUnit_Framework_TestCase
+class ParameterContainerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Verbs\Container\ParameterContainer
@@ -46,7 +46,7 @@ class ParameterContainerTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new ParameterContainer();
     }

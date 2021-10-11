@@ -38,7 +38,7 @@ use Assimp\Converter\FileConverter;
  *
  * @author magdev
  */
-class FileConverterTest extends \PHPUnit_Framework_TestCase
+class FileConverterTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Converter\FileConverter
@@ -47,18 +47,18 @@ class FileConverterTest extends \PHPUnit_Framework_TestCase
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::setUp()
+     * @see PHPUnit\Framework\TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new FileConverter();
     }
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::tearDown()
+     * @see PHPUnit\Framework\TestCase::tearDown()
      */
-    protected function tearDown()
+    protected function tearDown() : void
     {
         system('rm -f '.ASSIMP_TEST_FILES.'/output/* 2>&1 >> /dev/null');
     }

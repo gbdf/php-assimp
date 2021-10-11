@@ -38,7 +38,7 @@ use Assimp\Command\Verbs\VersionVerb;
  *
  * @author magdev
  */
-class ResultTest extends \PHPUnit_Framework_TestCase
+class ResultTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Result
@@ -46,18 +46,18 @@ class ResultTest extends \PHPUnit_Framework_TestCase
     protected $object;
 
     /**
-     * @see PHPUnit_Framework_TestCase::setUp()
+     * @see PHPUnit\Framework\TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new Result();
     }
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::tearDown()
+     * @see PHPUnit\Framework\TestCase::tearDown()
      */
-    protected function tearDown()
+    protected function tearDown() : void
     {
         $this->object = null;
     }

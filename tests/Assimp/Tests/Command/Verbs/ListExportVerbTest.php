@@ -37,7 +37,7 @@ use Assimp\Command\Verbs\ListExportVerb;
  *
  * @author magdev
  */
-class ListExportVerbTest extends \PHPUnit_Framework_TestCase
+class ListExportVerbTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Verbs\ListExportVerb
@@ -48,7 +48,7 @@ class ListExportVerbTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new ListExportVerb();
     }

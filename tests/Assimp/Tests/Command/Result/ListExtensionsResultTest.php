@@ -37,7 +37,7 @@ use Assimp\Command\Result\ListExtensionsResult;
  *
  * @author magdev
  */
-class ListExtensionsResultTest extends \PHPUnit_Framework_TestCase
+class ListExtensionsResultTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Result\ListExtensionsResult
@@ -47,18 +47,18 @@ class ListExtensionsResultTest extends \PHPUnit_Framework_TestCase
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::setUp()
+     * @see PHPUnit\Framework\TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->object = new ListExtensionsResult();
     }
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::tearDown()
+     * @see PHPUnit\Framework\TestCase::tearDown()
      */
-    protected function tearDown()
+    protected function tearDown() : void
     {
         $this->object = null;
     }

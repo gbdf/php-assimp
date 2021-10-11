@@ -18,14 +18,15 @@
 		"php" : ">=7.1.0"
 	},
 	"require-dev" : {
-		"phpunit/phpunit" : "6.4.*"
+		"phpunit/phpunit" : "10.0.x-dev"
 	},
 	"suggest" : {
 		"magdev/php-assimp-validator" : "Extension for the Symfony Validator component"
 	},
 	"autoload" : {
 		"psr-4" : {
-			"Assimp\\" : "src/"
+			"Assimp\\" : "src/",
+			"Assimp\\Tests\\": "tests/"
 		}
 	},
 	"repositories" : [{

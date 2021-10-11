@@ -32,12 +32,14 @@ namespace Assimp\Tests\Command;
 
 use Assimp\Command\Command;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * Test for Assimp Command
  *
  * @author magdev
  */
-class CommandTest extends \PHPUnit_Framework_TestCase
+class CommandTest extends TestCase
 {
     /**
      * @var \Assimp\Command\Command
@@ -47,7 +49,7 @@ class CommandTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new Command();
     }

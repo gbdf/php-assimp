@@ -37,7 +37,7 @@ use Assimp\Command\Result\ExportInfoResult;
  *
  * @author magdev
  */
-class ExportInfoResultTest extends \PHPUnit_Framework_TestCase
+class ExportInfoResultTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Result\ExportInfoResult
@@ -45,18 +45,18 @@ class ExportInfoResultTest extends \PHPUnit_Framework_TestCase
     protected $object;
 
     /**
-     * @see PHPUnit_Framework_TestCase::setUp()
+     * @see PHPUnit\Framework\TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp():void
     {
         $this->object = new ExportInfoResult();
     }
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::tearDown()
+     * @see PHPUnit\Framework\TestCase::tearDown()
      */
-    protected function tearDown()
+    protected function tearDown():void
     {
     	$this->object = null;
     }

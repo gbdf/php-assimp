@@ -35,7 +35,7 @@ use Assimp\Command\Verbs\Container\ArgumentContainer;
 /**
  * Test for ArgumentContainer
  */
-class ArgumentContainerTest extends \PHPUnit_Framework_TestCase
+class ArgumentContainerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Verbs\Container\ArgumentContainer
@@ -46,7 +46,7 @@ class ArgumentContainerTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->object = new ArgumentContainer();
     }

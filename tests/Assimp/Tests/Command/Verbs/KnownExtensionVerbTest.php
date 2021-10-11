@@ -37,7 +37,7 @@ use Assimp\Command\Verbs\KnowExtensionVerb;
  *
  * @author magdev
  */
-class KnowExtensionVerbTest extends \PHPUnit_Framework_TestCase
+class KnowExtensionVerbTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Verbs\KnownExtensionVerb
@@ -47,18 +47,18 @@ class KnowExtensionVerbTest extends \PHPUnit_Framework_TestCase
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::setUp()
+     * @see PHPUnit\Framework\TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new KnowExtensionVerb();
     }
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::tearDown()
+     * @see PHPUnit\Framework\TestCase::tearDown()
      */
-    protected function tearDown()
+    protected function tearDown() : void
     {
     	$this->object = null;
     }

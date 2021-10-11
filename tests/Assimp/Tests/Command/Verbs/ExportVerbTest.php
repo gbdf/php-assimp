@@ -37,7 +37,7 @@ use Assimp\Command\Verbs\ExportVerb;
  *
  * @author magdev
  */
-class ExportVerbTest extends \PHPUnit_Framework_TestCase
+class ExportVerbTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Verbs\ExportVerb
@@ -50,7 +50,7 @@ class ExportVerbTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new ExportVerb();
 
@@ -61,7 +61,7 @@ class ExportVerbTest extends \PHPUnit_Framework_TestCase
     /**
      * Cleanup
      */
-    protected function tearDown()
+    protected function tearDown() : void
     {
         if (file_exists($this->outputFile)) {
             unlink($this->outputFile);

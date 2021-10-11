@@ -37,7 +37,7 @@ use Assimp\Command\Verbs\ListExtensionsVerb;
  *
  * @author magdev
  */
-class ListExtensionsVerbTest extends \PHPUnit_Framework_TestCase
+class ListExtensionsVerbTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Verbs\ListExtensionsVerb
@@ -47,18 +47,18 @@ class ListExtensionsVerbTest extends \PHPUnit_Framework_TestCase
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::setUp()
+     * @see PHPUnit\Framework\TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new ListExtensionsVerb();
     }
 
 
     /**
-     * @see PHPUnit_Framework_TestCase::tearDown()
+     * @see PHPUnit\Framework\TestCase::tearDown()
      */
-    protected function tearDown()
+    protected function tearDown() : void
     {
     	$this->object = null;
     }

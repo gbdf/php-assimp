@@ -37,7 +37,7 @@ use Assimp\Command\Verbs\ExtractVerb;
  *
  * @author magdev
  */
-class ExtractVerbTest extends \PHPUnit_Framework_TestCase
+class ExtractVerbTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Assimp\Command\Verbs\DumpVerb
@@ -50,7 +50,7 @@ class ExtractVerbTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->object = new ExtractVerb();
 
